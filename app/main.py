@@ -20,9 +20,6 @@ app.include_router(restaurant_manager.router)
 app.include_router(admin.router)
 app.include_router(debug.router)  # ✅ test route enabled
 
-@app.get("/healthz")
-def health_check():
-    return {"status": "ok"}
 
 @app.on_event("startup")
 def startup_event():
